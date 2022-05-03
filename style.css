@@ -80,6 +80,45 @@ picture {
 /* Base */
 body {
   font-family: var(--font-sans);
-  background-color: var(--white);
-  color: var(--black);
+  background-color: var(--black);
+  color: var(--white);
+}
+/* home */
+.home{
+height: 100vh;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: auto 1fr;
+background-image: url("img.png");
+background-repeat: no-repeat;
+background-position: bottom right;
+background-size: 400px;
+}
+
+/* nav */
+.menu{
+  grid-column: 1/-1;
+}
+.menu ul{
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  padding:25px;
+}
+/* titulo */
+.titulo{
+  grid-column: 2/3;
+ font-size: 40px;
+ align-self: center;
+}
+.titulo span{
+  font-size: 80px;
+  line-height: 1;
+  text-align: center;
+}
+/* yo */
+.yo{
+  align-self: end;
+  padding: 30px;
+
 }
