@@ -41,16 +41,36 @@ picture {
   max-width: 100%;
   display: block;
 }
-
+button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
 a {
   color: inherit;
   text-decoration: none;
   transition: all 400ms ease-in;
 }
 
-a:hover {
+.categorias a:hover {
   opacity: 0.7;
   text-decoration: underline;
+}
+a:hover,
+.current {
+  opacity: 0.7;
+  text-decoration: none;
 }
 .current {
   font-weight: bold;
@@ -138,6 +158,37 @@ body {
   line-height: 1;
   text-align: center;
 }
+
+/* titulo ABOUT ME */
+.titulo2 {
+  margin-top: 30px;
+  grid-row: 2/ 3;
+  grid-column: 2/3;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+.texto {
+  /* margin-top: -40px; */
+  grid-row: 1/3;
+  grid-column: 3/3;
+  font-size: 10px;
+  align-self: center;
+  padding-right: 40px;
+}
+
+.texto p {
+  display: inline;
+}
+
+.textoc {
+  margin-top: 100px;
+  grid-row: 2/ 3;
+  grid-column: -2/3;
+  font-size: 15px;
+  line-height: 1.2;
+}
+
 /* yo */
 .yo {
   grid-row: 2 / 3;
@@ -146,40 +197,116 @@ body {
   padding: 30px;
 }
 
+.textox {
+  /* margin-top: -300px; */
+  background-color: blue;
+  padding: 5vh 2vw;
+  width: 100vw;
+  grid-row: 3;
+  grid-column: 1/-1;
+  font-size: 12px;
+
+}
 /* proyectos */
-.proyectos .categorias {
-  /* border: 1px solid white; */
+/* .proyectos .categorias { */
+/* border: 1px solid white; */
+/* position: relative;
   display: grid;
+  place-items: center;
+  grid-column: 1 /2;
   grid-row: 2 / 3;
+  border: 1px solid white;
+  z-index: 10;
+  background-color: black; */
+/* } */
+
+/* CATEGORIAS DE PROYECTOS SOLOS */
+.categorias2 {
+  font-size: 13px;
+  grid-row: 3 / 3;
+  grid-column: 1/ 4;
+  margin-left: 30px;
 }
 
-.proyectos .categorias ul {
-  /* border: 1px solid white; */
-  width: 100%;
+.categorias2 .active {
+  font-size: 15px;
+}
+
+.titulo3 {
+  margin-top: 30px;
+  margin-left: 30px;
+  grid-row: 2/ 3;
+  grid-column: 1/3;
+  font-size: 40px;
+  line-height: 1.2;
+}
+
+/* CATEGORIAS DE PROYECTOS GENERAL */
+.proyectos .categorias {
+  width: max-content;
+  z-index: 10;
+  display: grid;
+  height: 100vh;
+  background-color: black;
   padding: 20px;
-  margin: auto;
+  position: fixed;
+  /* padding-top: 40vh; */
+  padding-right: 10vw;
 }
+/* TODO: Cuando estoy en proyectos, el menu esta centrado y cuando esoty en un proyecto /categoria, se baja al piso */
+/* @media screen and (max-width: 600px) {
+ .proyectos .categorias ul {
+    position: static;
+  }
+} */
 
-.proyectos .categorias ul li {
+.proyectos .categorias li {
   font-size: 24px;
 }
-.proyectos .categorias ul li {
+.proyectos .categorias li {
   font-size: 20px;
 }
 
-.proyectos .categorias ul li a {
+.proyectos .categorias li a {
   font-weight: normal;
 }
-.proyectos .categorias ul .active {
+.proyectos .categorias .active {
   font-size: 24px;
 }
 .proyectos .imagenes {
-  grid-row: 2 / 3;
+    grid-row: 2 / 3;
   grid-column: 2 / 4;
   display: flex;
-  align-items: center;
+    align-items: initial;
 }
 
-.proyectos .imagenes img {
-  margin: auto;
+.proyectos .imagenes figure {
+  /* display: grid; */
+  /* gap: 80px; */
+  /*   margin: auto; */
+  margin-top: 100px;
+  margin-bottom: auto;
+  min-width: 480px;
+}
+
+.proyectos .imagenes figure {
+  /* display: grid; */
+  /* gap: 80px; */
+  display: grid;
+  /* position: relative; */
+  /* min-height: 400px; */
+  min-width: 480px;
+}
+.proyectos .imagenes figure img {
+  /* display: grid; */
+  /* gap: 80px; */
+  /* height: 100%; */
+  /* border: 1px solid white; */
+}
+.proyectos .imagenes figure h2 {
+  /* position: absolute; */
+  font-size: 19px;
+  text-align: left;
+}
+.proyectos .imagenes figure figcaption {
 }

@@ -13,23 +13,69 @@
   <div class="home">
     <nav class="menu">
       <ul>
-        <li>proyectos</li>
-        <li>about me</li>
+        <li>
+          <a class="current" href="./proyectos.html">proyectos</a>
+        </li>
+        <li><a href="./about-me.html">
+            about me</li>
         <li>contacto</li>
+        <button onclick="window.history.go(-1)">regresar</button>
       </ul>
     </nav>
-    <div class="categorias">
-      <ul>
-        <li class="active">Fotografia</li>
-        <li>Branding</li>
-        <li>Diseño editorial</li>
-        <li>Diseño web</li>
-      </ul>
-    </div>
+
+
+    <!-- elemento class grid > margin auto = centrar -->
+
+
+    <ul class="categorias">
+      <div>
+        <li class="active">Fotografía</li>
+        <li>
+          <a href="./branding.html">
+            Branding
+          </a>
+        </li>
+        <li>
+          <a href="./diseno-editorial.html">
+            Diseño editorial
+          </a>
+        </li>
+        <li>
+          <a href="./diseno-web.html">
+            Diseño web
+          </a>
+        </li>
+      </div>
+    </ul>
+    </ul>
+
     <div class="imagenes">
-      <img src="https://picsum.photos/480" alt="" class="yo">
-      <img src="https://picsum.photos/480" alt="" class="yo">
+      <!-- <img src="https://picsum.photos/480" alt="" class="yo">
+      <img src="https://picsum.photos/480" alt="" class="yo"> -->
+      <a href="banqueta.html">
+        <figure class="yo">
+          <h2>La banqueta</h2>
+          <img
+            src=https://res.cloudinary.com/dqvzf7ed2/image/upload/v1654010838/Centro_1semestre_fotografi%CC%81a_prueba11_bti4f0.jpg
+            alt="" class="yo">
+          <figcaption>
+            Proyecto fotográfico a blanco y negro con cámara análoga, en dónde
+            la vida cotidiana fue fuente de inspiración.
+            <figcaption>
+        </figure>
+      </a>
+      <figure class="yo">
+        <h2> Oaxaca</h2>
+        <img src=https://res.cloudinary.com/dqvzf7ed2/image/upload/v1654010899/IMG_5897_nwlgg6.jpg alt="" class="yo">
+        <figcaption>
+          Fotografías que relatan la cuidad de Oaxaca y sus alrededores.
+
+          <figcaption>
+      </figure>
+
     </div>
+
+
   </div>
 
 </body>
