@@ -184,11 +184,42 @@
       display: grid;
     }
 
+    /* Esto solo aplica a desktop  */
     @media screen and (min-width: 600px) {
+      .grid {
+        display: block;
+      }
+
       .main {
         display: grid;
+        height: 90vh;
+        gap: 40px;
+        /* grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 100px 1fr; */
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: min-content 1fr;
+        grid-template-rows: 150px 1fr;
+      }
+
+      .main h1 {
+        align-self: center;
+        grid-column: 1 / 1;
+        grid-row: 1 / 1;
+      }
+
+      .main .textox {
+        padding-top: 40px;
+        align-self: start;
+        grid-column: 1 /2;
+        grid-row: 2/ 3;
+      }
+
+      .main .imagen-proyectos {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        display: flex;
+        align-self: start;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
       }
     }
   </style>
@@ -213,18 +244,16 @@
     <h1>
       Oaxaca
     </h1>
-    <div class="textox">
-      <p>
-        Proyecto fotográfico a blanco y negro con cámara análoga, en dónde la vida cotidiana fue fuente de inspiración.
+    <p class="textox">
+      Proyecto fotográfico a blanco y negro con cámara análoga, en dónde la vida cotidiana fue fuente de inspiración.
 
-        Decidí trabajar con cualquier tipo de movimiento
-        que sucediera en las calles, donde poco a poco me di cuenta
-        de la riqueza de las banquetas utilizando a Miroslava Tichy
-        como referencia, por lo que trabaje con conceptos
-        como tráfico, movimiento, espacio, entre otros.
+      Decidí trabajar con cualquier tipo de movimiento
+      que sucediera en las calles, donde poco a poco me di cuenta
+      de la riqueza de las banquetas utilizando a Miroslava Tichy
+      como referencia, por lo que trabaje con conceptos
+      como tráfico, movimiento, espacio, entre otros.
 
-      </p>
-    </div>
+    </p>
     <div class="imagen-proyectos">
       <img src="https://picsum.photos/600" alt="">
       <img src="https://picsum.photos/600" alt="">
