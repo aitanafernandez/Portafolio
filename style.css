@@ -1,12 +1,15 @@
 @import url("https://rsms.me/inter/inter.css");
+
 html {
   font-family: "Inter", sans-serif;
 }
+
 @supports (font-variation-settings: normal) {
   html {
     font-family: "Inter var", sans-serif;
   }
 }
+
 /* Imports - Tipografía */
 /* Reset */
 *,
@@ -46,6 +49,7 @@ picture {
   max-width: 100%;
   display: block;
 }
+
 button {
   display: inline-block;
   border: none;
@@ -62,6 +66,7 @@ button {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+
 a {
   color: inherit;
   text-decoration: none;
@@ -72,17 +77,20 @@ a {
   opacity: 0.7;
   text-decoration: underline;
 }
+
 a:hover,
 .current {
   opacity: 0.7;
   text-decoration: none;
 }
+
 .back {
   position: absolute;
   top: 40px;
   left: 40px;
   z-index: 100;
 }
+
 .current {
   font-weight: bold;
   color: inherit;
@@ -96,6 +104,7 @@ a:hover,
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -133,6 +142,7 @@ body {
   background-color: var(--black);
   color: var(--white);
 }
+
 /* home */
 .home {
   height: 100vh;
@@ -144,6 +154,7 @@ body {
   background-position: bottom right;
   background-size: 400px;
 }
+
 /* .proyectos .home {
   height: 100vh;
   display: grid;
@@ -157,6 +168,7 @@ body {
   position: fixed;
   width: 100%;
 }
+
 .menu ul {
   margin-left: auto;
   display: flex;
@@ -164,6 +176,7 @@ body {
   gap: 20px;
   padding: 25px;
 }
+
 /* titulo */
 .titulo {
   grid-row: 2 / 3;
@@ -171,6 +184,7 @@ body {
   font-size: 40px;
   align-self: center;
 }
+
 .titulo span {
   font-size: 80px;
   line-height: 1;
@@ -219,6 +233,7 @@ body {
 .video img {
   transform: translateX(0) scale(1);
 }
+
 @media screen and (min-width: 1000px) {
   .video img {
     transform: translateX(35vw) scale(1.2);
@@ -232,6 +247,7 @@ body {
   align-self: end;
   padding: 30px;
 }
+
 .proyectos .home {
   height: 100vh;
   display: grid;
@@ -240,9 +256,10 @@ body {
   gap: 20px;
   background: none;
 }
+
 .textox {
   margin-top: -300px;
-  padding: 20px 10px;
+  padding: 40px 30px;
   /* border: 2px solid white; */
   align-self: center;
   grid-row: 2;
@@ -251,7 +268,7 @@ body {
 }
 
 .imagen-proyectos {
-  width: 600px;
+  width: 1000px;
   overflow-x: scroll;
   display: flex;
   grid-row: 2;
@@ -260,6 +277,7 @@ body {
   /* border: 2px solid white; */
   scroll-snap-type: x mandatory;
 }
+
 .imagen-proyectos img {
   width: 600px;
 }
@@ -297,6 +315,7 @@ body {
   /* padding-top: 40vh; */
   padding-right: 10vw;
 }
+
 /* TODO: Cuando estoy en proyectos, el menu esta centrado y cuando esoty en un proyecto /categoria, se baja al piso */
 /* @media screen and (max-width: 600px) {
  .proyectos .categorias ul {
@@ -307,6 +326,7 @@ body {
 .proyectos .categorias li {
   font-size: 24px;
 }
+
 .proyectos .categorias li {
   font-size: 20px;
 }
@@ -314,9 +334,11 @@ body {
 .proyectos .categorias li a {
   font-weight: normal;
 }
+
 .proyectos .categorias .active {
   font-size: 24px;
 }
+
 .proyectos .imagenes {
   grid-row: 2 / 3;
   grid-column: 2 / 4;
@@ -341,16 +363,18 @@ body {
   /* min-height: 400px; */
   min-width: 480px;
 }
+
 .proyectos .imagenes figure img {
   /* display: grid; */
   /* gap: 80px; */
   /* height: 100%; */
   /* border: 1px solid white; */
 }
+
 .proyectos .imagenes figure h2 {
   /* position: absolute; */
   font-size: 19px;
   text-align: left;
 }
-.proyectos .imagenes figure figcaption {
-}
+
+.proyectos .imagenes figure figcaption {}
