@@ -1,0 +1,203 @@
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Inter var", sans-serif;
+  }
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+ul {
+  margin: 0;
+  padding-inline: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  background: none;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 400ms ease-in;
+}
+
+.categorias a:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+a:hover,
+.current {
+  opacity: 0.7;
+  text-decoration: none;
+}
+
+.current {
+  font-weight: bold;
+  color: inherit;
+  text-decoration: none;
+  transition: all 400ms ease-in;
+}
+
+.current:hover {
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behaviour: auto !important;
+  }
+}
+
+/* Variables */
+:root {
+  /* 1. Colores */
+  --black: #000000;
+  --white: #ffffff;
+  /* 2. Tipografía */
+  --font-sans: "Inter var", sans-serif;
+  --font-size-1: 1rem;
+  --font-size-2: 1.1rem;
+  --font-size-3: 1.25rem;
+  --font-size-4: 1.5rem;
+  --font-size-5: 2rem;
+  --font-size-6: 2.5rem;
+  --font-size-fluid-1: clamp(1rem, 4vw, 1.5rem);
+  --font-size-fluid-2: clamp(1.5rem, 6vw, 2.5rem);
+  --font-size-fluid-3: clamp(2rem, 9vw, 3.5rem);
+  /* 3. Layouts */
+  --size-mobile: 414px;
+  --size-desktop: 1440px;
+}
+
+/* Base */
+body {
+  font-family: var(--font-sans);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+/* Menu */
+.proyectos .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  width: 90vw;
+  margin: auto
+}
+.proyectos .menu ul {
+  display: flex;
+  gap: 1rem
+}
+.proyectos .main {
+  max-width: 90vw;
+  margin: auto
+}
+.proyectos .main h1 {
+  padding-block: 1rem
+}
+.proyectos .textox {
+  padding-block-end: 1rem;
+  font-size: clamp(15px, 1rem, 18px)
+}
+/* Proyectos */
+.proyectos {
+  height: 100vh
+}
+.proyectos .imagen-proyectos {
+  display: grid;
+  row-gap: 20px
+}
+.proyectos .grid {
+  display: grid
+}
+@media screen and (min-width: 600px) {
+  .proyectos .grid {
+    display: block
+  }
+  .proyectos .main {
+    display: grid;
+    height: 90vh;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px 1fr
+  }
+  .proyectos .main h1 {
+    align-self: center;
+    grid-column: 1/1;
+    grid-row: 1/1
+  }
+  .proyectos .main .textox {
+    padding-top: 40px;
+    align-self: start;
+    grid-column: 1/2;
+    grid-row: 2/3
+  }
+  .proyectos .main .imagen-proyectos {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    align-self: start;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory
+  }
+}
